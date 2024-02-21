@@ -1,0 +1,8 @@
+@tailwind utilities;
+@tailwind base;
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
