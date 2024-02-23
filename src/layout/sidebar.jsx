@@ -13,6 +13,12 @@ export default function AppSidebar() {
     const menuList = [{ label: '首页', key: 'dashboard' }];
     const [selectKey, setSelctKey] = useState('');
 
+    useEffect(() => {
+        if ((menuActive && !isDesktop) || (!menuActive && isDesktop)) {
+            onMenuToggle();
+        }
+    }, [isDesktop]);
+
     const handleClickMenuItem = ({ key }) => {
         setSelctKey(key);
         navigate(`/${key}`);
